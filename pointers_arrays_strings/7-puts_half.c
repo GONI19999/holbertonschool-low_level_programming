@@ -1,19 +1,33 @@
 #include "main.h"
 
 /**
- * print_chessboard - prints the chessboard
- * @a: two dimension array to print
+ * puts_half - prints half of a string
+ * followed by a new line
+ * @str: string to be printed
  */
-void print_chessboard(char (*a)[8])
+void puts_half(char *str)
 {
-	int i, j;
+	int len, n, i;
 
-	for (i = 0; i < 8; i++)
+	len = 0;
+
+	while (str[len] != '\0')
 	{
-		for (j = 0; j < 8; j++)
-		{
-			_putchar(a[i][j]);
-		}
-		_putchar('\n');
+		len++;
 	}
+
+	if (len % 2 == 0)
+	{
+		for (i = len / 2; str[i] != '\0'; i++)
+		{
+			_putchar(str[i]);
+		}
+	} else if (len % 2)
+	{
+		for (n = (len - 1) / 2; n < len - 1; n++)
+		{
+			_putchar(str[n + 1]);
+		}
+	}
+	_putchar('\n');
 }
