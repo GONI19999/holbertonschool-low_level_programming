@@ -1,19 +1,18 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * print_chessboard - prints the chessboard
- * @a: two dimension array to print
+ * main - check the code for
+ *
+ * Return: Always 0.
  */
-void print_chessboard(char (*a)[8])
+int main(void)
 {
-	int i, j;
+    char s[] = "Expect the best. Prepare for the worst. Capitalize on what comes.\n";
+    char *p;
 
-	for (i = 0; i < 8; i++)
-	{
-		for (j = 0; j < 8; j++)
-		{
-			_putchar(a[i][j]);
-		}
-		_putchar('\n');
-	}
+    p = leet(s);
+    printf("%s", p);
+    printf("%s", s);
+    return (0);
 }
